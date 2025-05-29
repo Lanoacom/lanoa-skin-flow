@@ -10,7 +10,7 @@ const SkinKits = () => {
       name: "Kit Controle",
       subtitle: "Para Pele Oleosa",
       icon: Zap,
-      color: "from-emerald-500 to-emerald-600",
+      color: "from-coral to-peach",
       benefits: [
         "Controla oleosidade sem ressecar",
         "Reduz visivelmente poros e imperfeições",
@@ -24,7 +24,7 @@ const SkinKits = () => {
       name: "Kit Hidratação",
       subtitle: "Para Pele Seca",
       icon: Droplets,
-      color: "from-slate-500 to-slate-600",
+      color: "from-cyan to-violet",
       benefits: [
         "Hidratação profunda sem pesar na pele",
         "Elimina descamação e desconforto",
@@ -38,7 +38,7 @@ const SkinKits = () => {
       name: "Kit Equilíbrio",
       subtitle: "Para Pele Mista",
       icon: Heart,
-      color: "from-emerald-600 to-slate-600",
+      color: "from-lavender to-coral",
       benefits: [
         "Equilibra áreas oleosas e secas",
         "Uniformiza textura e aparência",
@@ -52,7 +52,7 @@ const SkinKits = () => {
       name: "Kit Calmante",
       subtitle: "Para Pele Sensível",
       icon: Shield,
-      color: "from-rose-500 to-rose-600",
+      color: "from-violet to-cyan",
       benefits: [
         "Acalma vermelhidão e irritação",
         "Fortalece a barreira cutânea",
@@ -70,8 +70,8 @@ const SkinKits = () => {
   return (
     <section id="kits" className="py-20 bg-white relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-20 left-0 w-72 h-72 bg-emerald-50 rounded-full -translate-x-36"></div>
-      <div className="absolute bottom-20 right-0 w-64 h-64 bg-slate-50 rounded-full translate-x-32"></div>
+      <div className="absolute top-20 left-0 w-72 h-72 bg-gradient-to-br from-peach-100 to-coral-100 rounded-full -translate-x-36 opacity-60"></div>
+      <div className="absolute bottom-20 right-0 w-64 h-64 bg-gradient-to-br from-cyan-100 to-violet-100 rounded-full translate-x-32 opacity-60"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
@@ -79,7 +79,7 @@ const SkinKits = () => {
           <div className="text-center space-y-6 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Apresentando os{" "}
-              <span className="text-emerald-600">
+              <span className="bg-gradient-to-r from-coral via-peach to-cyan bg-clip-text text-transparent">
                 Kits Lanoa
               </span>
             </h2>
@@ -98,11 +98,11 @@ const SkinKits = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${kit.color.replace('500', '50').replace('600', '100')} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${kit.color.replace('coral', 'coral-50').replace('peach', 'peach-50').replace('cyan', 'cyan-50').replace('violet', 'violet-50').replace('lavender', 'lavender-50')} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
                 
                 <CardContent className="relative p-6 space-y-6">
                   {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${kit.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 bg-gradient-to-br ${kit.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <kit.icon className="w-8 h-8 text-white" />
                   </div>
 
@@ -116,7 +116,7 @@ const SkinKits = () => {
                     <ul className="space-y-2">
                       {kit.benefits.map((benefit, i) => (
                         <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-gradient-to-r from-coral to-cyan rounded-full mt-2 flex-shrink-0"></div>
                           {benefit}
                         </li>
                       ))}
@@ -134,7 +134,7 @@ const SkinKits = () => {
                     
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-gray-900 group-hover:text-white transition-colors duration-300"
+                      className="w-full group-hover:bg-gradient-to-r group-hover:from-coral group-hover:to-cyan group-hover:text-white group-hover:border-transparent transition-all duration-300"
                     >
                       Ver Detalhes
                       <ArrowRight className="ml-2 w-4 h-4" />
@@ -150,7 +150,7 @@ const SkinKits = () => {
             <Button 
               onClick={scrollToQuiz}
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-12 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-coral via-peach to-cyan hover:from-coral-dark hover:via-peach-dark hover:to-cyan-dark text-white font-bold py-4 px-12 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300 animate-gradient-shift"
             >
               FAZER O TESTE E DESCOBRIR MEU KIT IDEAL
               <ArrowRight className="ml-2 w-5 h-5" />
