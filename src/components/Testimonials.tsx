@@ -10,7 +10,7 @@ const Testimonials = () => {
       kit: "Kit Controle",
       rating: 5,
       image: "M",
-      color: "from-turquoise to-turquoise-light",
+      color: "from-emerald-500 to-emerald-600",
       text: "Depois de anos lutando contra a oleosidade excessiva e gastando fortunas em produtos que não funcionavam, encontrei o Kit Controle da Lanoa. Em apenas 3 semanas, minha pele mudou completamente. A oleosidade está controlada, os poros visivelmente menores e não tenho mais aquela sensação de pele pesada. O melhor é que a rotina leva só 5 minutos!",
       highlight: "Pele oleosa controlada em 3 semanas"
     },
@@ -20,7 +20,7 @@ const Testimonials = () => {
       kit: "Kit Hidratação",
       rating: 5,
       image: "C",
-      color: "from-sky to-sky-light",
+      color: "from-slate-500 to-slate-600",
       text: "Minha pele sempre foi muito seca, especialmente no inverno. Já tinha desistido de encontrar produtos que realmente hidratassem sem deixar aquela sensação pegajosa. O Kit Hidratação da Lanoa mudou tudo. Desde a primeira semana, a descamação sumiu e minha pele finalmente parece saudável. As linhas finas também estão menos visíveis, um bônus que não esperava!",
       highlight: "Hidratação profunda sem sensação pegajosa"
     },
@@ -30,7 +30,7 @@ const Testimonials = () => {
       kit: "Kit Calmante",
       rating: 5,
       image: "J",
-      color: "from-rose to-rose-light",
+      color: "from-rose-500 to-rose-600",
       text: "Tenho pele extremamente sensível e reativa. Qualquer produto novo era motivo de ansiedade porque nunca sabia como minha pele reagiria. O Kit Calmante da Lanoa foi o primeiro que não causou nenhuma irritação. Pelo contrário, acalmou a vermelhidão que eu tinha há anos e fortaleceu minha pele. Agora posso sair sem maquiagem pela primeira vez em muito tempo!",
       highlight: "Primeira vez sem irritação em anos"
     }
@@ -45,8 +45,8 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-lime/10 to-turquoise/10 rounded-full translate-x-40 -translate-y-40"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-coral/10 to-rose/10 rounded-full -translate-x-36 translate-y-36"></div>
+      <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-50 rounded-full translate-x-40 -translate-y-40"></div>
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-slate-50 rounded-full -translate-x-36 translate-y-36"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
@@ -54,7 +54,7 @@ const Testimonials = () => {
           <div className="text-center space-y-6 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Histórias Reais de{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-coral via-turquoise to-lime">
+              <span className="text-emerald-600">
                 Transformação
               </span>
             </h2>
@@ -72,7 +72,7 @@ const Testimonials = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.color.replace('500', '50').replace('600', '100')} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
                 
                 <CardContent className="relative p-8 space-y-6">
                   {/* Quote icon */}
@@ -119,7 +119,7 @@ const Testimonials = () => {
                   key={index}
                   className="text-center group cursor-default"
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-turquoise via-coral to-lime mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-4xl md:text-5xl font-bold text-emerald-600 mb-3 group-hover:scale-110 transition-transform duration-300">
                     {stat.number}
                   </div>
                   <p className="text-gray-600 leading-relaxed">{stat.label}</p>

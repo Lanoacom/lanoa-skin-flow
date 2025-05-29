@@ -63,31 +63,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Lanoa brand colors inspired by the image
-				turquoise: {
-					DEFAULT: '#4ECDC4',
-					light: '#7EDDDB',
-					dark: '#3BA69C'
+				// Lanoa brand colors - elegant and professional
+				emerald: {
+					DEFAULT: '#10B981',
+					light: '#34D399',
+					dark: '#059669'
 				},
-				lime: {
-					DEFAULT: '#C5D86D',
-					light: '#D4E287',
-					dark: '#A8C855'
-				},
-				coral: {
-					DEFAULT: '#FF8A65',
-					light: '#FFB085',
-					dark: '#FF7043'
-				},
-				sky: {
-					DEFAULT: '#64B5F6',
-					light: '#90CAF9',
-					dark: '#42A5F5'
+				slate: {
+					DEFAULT: '#64748B',
+					light: '#94A3B8',
+					dark: '#475569'
 				},
 				rose: {
-					DEFAULT: '#F8BBD9',
-					light: '#F9D2E3',
-					dark: '#F48FB1'
+					DEFAULT: '#F43F5E',
+					light: '#FB7185',
+					dark: '#E11D48'
 				}
 			},
 			borderRadius: {

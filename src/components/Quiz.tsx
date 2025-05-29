@@ -59,25 +59,25 @@ const Quiz = () => {
       oleosa: {
         kit: "Kit Controle",
         description: "Formulado especificamente para controlar oleosidade e reduzir poros",
-        color: "from-turquoise to-turquoise-light",
+        color: "from-emerald-500 to-emerald-600",
         benefits: ["Controla oleosidade", "Reduz poros", "Textura matificante"]
       },
       seca: {
         kit: "Kit Hidratação",
         description: "Hidratação profunda e duradoura sem sensação pegajosa",
-        color: "from-sky to-sky-light",
+        color: "from-slate-500 to-slate-600",
         benefits: ["Hidratação intensa", "Elimina descamação", "Suaviza linhas"]
       },
       mista: {
         kit: "Kit Equilíbrio",
         description: "Equilibra diferentes necessidades de cada área do rosto",
-        color: "from-lime to-lime-light",
+        color: "from-emerald-600 to-slate-600",
         benefits: ["Equilibra oleosidade", "Uniformiza textura", "Versatilidade"]
       },
       sensivel: {
         kit: "Kit Calmante",
         description: "Acalma, protege e fortalece peles sensíveis e reativas",
-        color: "from-rose to-rose-light",
+        color: "from-rose-500 to-rose-600",
         benefits: ["Acalma irritações", "Reduz vermelhidão", "Fortalece barreira"]
       }
     };
@@ -112,7 +112,7 @@ const Quiz = () => {
             <Card className="border-0 shadow-2xl">
               <CardContent className="p-12 text-center space-y-8">
                 <div className="space-y-4">
-                  <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto">
                     <CheckCircle className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900">
@@ -136,7 +136,7 @@ const Quiz = () => {
                 <div className="space-y-4">
                   <Button 
                     size="lg"
-                    className="w-full bg-gradient-to-r from-coral to-orange-500 hover:from-coral-dark hover:to-orange-600 text-white font-bold py-4 text-lg"
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 text-lg"
                   >
                     GARANTIR MEU {recommendation.kit.toUpperCase()} - R$ 110
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -179,7 +179,7 @@ const Quiz = () => {
                   <div 
                     key={index}
                     className={`w-3 h-3 rounded-full ${
-                      index <= currentQuestion ? 'bg-turquoise' : 'bg-gray-200'
+                      index <= currentQuestion ? 'bg-emerald-500' : 'bg-gray-200'
                     }`}
                   />
                 ))}
@@ -190,7 +190,7 @@ const Quiz = () => {
           <Card className="border-0 shadow-xl animate-scale-in">
             <CardContent className="p-8 space-y-8">
               <div className="text-center space-y-4">
-                <span className="text-sm font-medium text-turquoise">
+                <span className="text-sm font-medium text-emerald-600">
                   Pergunta {currentQuestion + 1} de {questions.length}
                 </span>
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -203,7 +203,7 @@ const Quiz = () => {
                   <Button
                     key={index}
                     variant="outline"
-                    className="w-full p-6 text-left justify-start hover:bg-turquoise/10 hover:border-turquoise transition-all duration-300"
+                    className="w-full p-6 text-left justify-start hover:bg-emerald-50 hover:border-emerald-500 transition-all duration-300"
                     onClick={() => handleAnswer(option.value)}
                   >
                     <span className="text-lg">{option.text}</span>
