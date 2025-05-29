@@ -63,31 +63,31 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Lanoa brand colors inspired by the gradient
-				coral: {
-					DEFAULT: '#FF6B6B',
-					light: '#FF8E8E',
-					dark: '#E55555'
-				},
-				cyan: {
+				// Lanoa brand colors inspired by the image
+				turquoise: {
 					DEFAULT: '#4ECDC4',
-					light: '#6ED5CE',
-					dark: '#3BB5AE'
+					light: '#7EDDDB',
+					dark: '#3BA69C'
 				},
-				violet: {
-					DEFAULT: '#A8E6CF',
-					light: '#B8EBD4',
-					dark: '#98D1C0'
+				lime: {
+					DEFAULT: '#C5D86D',
+					light: '#D4E287',
+					dark: '#A8C855'
 				},
-				peach: {
-					DEFAULT: '#FFD93D',
-					light: '#FFE066',
-					dark: '#E6C234'
+				coral: {
+					DEFAULT: '#FF8A65',
+					light: '#FFB085',
+					dark: '#FF7043'
 				},
-				lavender: {
-					DEFAULT: '#6C5CE7',
-					light: '#8B7BEA',
-					dark: '#5A4BD4'
+				sky: {
+					DEFAULT: '#64B5F6',
+					light: '#90CAF9',
+					dark: '#42A5F5'
+				},
+				rose: {
+					DEFAULT: '#F8BBD9',
+					light: '#F9D2E3',
+					dark: '#F48FB1'
 				}
 			},
 			borderRadius: {
@@ -131,25 +131,13 @@ export default {
 						transform: 'scale(1)',
 						opacity: '1'
 					}
-				},
-				'gradient-shift': {
-					'0%': {
-						backgroundPosition: '0% 50%'
-					},
-					'50%': {
-						backgroundPosition: '100% 50%'
-					},
-					'100%': {
-						backgroundPosition: '0% 50%'
-					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out',
-				'gradient-shift': 'gradient-shift 3s ease-in-out infinite'
+				'scale-in': 'scale-in 0.4s ease-out'
 			}
 		}
 	},

@@ -10,7 +10,7 @@ const Testimonials = () => {
       kit: "Kit Controle",
       rating: 5,
       image: "M",
-      color: "from-coral to-peach",
+      color: "from-turquoise to-turquoise-light",
       text: "Depois de anos lutando contra a oleosidade excessiva e gastando fortunas em produtos que não funcionavam, encontrei o Kit Controle da Lanoa. Em apenas 3 semanas, minha pele mudou completamente. A oleosidade está controlada, os poros visivelmente menores e não tenho mais aquela sensação de pele pesada. O melhor é que a rotina leva só 5 minutos!",
       highlight: "Pele oleosa controlada em 3 semanas"
     },
@@ -20,7 +20,7 @@ const Testimonials = () => {
       kit: "Kit Hidratação",
       rating: 5,
       image: "C",
-      color: "from-cyan to-violet",
+      color: "from-sky to-sky-light",
       text: "Minha pele sempre foi muito seca, especialmente no inverno. Já tinha desistido de encontrar produtos que realmente hidratassem sem deixar aquela sensação pegajosa. O Kit Hidratação da Lanoa mudou tudo. Desde a primeira semana, a descamação sumiu e minha pele finalmente parece saudável. As linhas finas também estão menos visíveis, um bônus que não esperava!",
       highlight: "Hidratação profunda sem sensação pegajosa"
     },
@@ -30,7 +30,7 @@ const Testimonials = () => {
       kit: "Kit Calmante",
       rating: 5,
       image: "J",
-      color: "from-violet to-cyan",
+      color: "from-rose to-rose-light",
       text: "Tenho pele extremamente sensível e reativa. Qualquer produto novo era motivo de ansiedade porque nunca sabia como minha pele reagiria. O Kit Calmante da Lanoa foi o primeiro que não causou nenhuma irritação. Pelo contrário, acalmou a vermelhidão que eu tinha há anos e fortaleceu minha pele. Agora posso sair sem maquiagem pela primeira vez em muito tempo!",
       highlight: "Primeira vez sem irritação em anos"
     }
@@ -45,8 +45,8 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-peach-100 to-coral-100 rounded-full translate-x-40 -translate-y-40 opacity-60"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-violet-100 to-cyan-100 rounded-full -translate-x-36 translate-y-36 opacity-60"></div>
+      <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-lime/10 to-turquoise/10 rounded-full translate-x-40 -translate-y-40"></div>
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-coral/10 to-rose/10 rounded-full -translate-x-36 translate-y-36"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-16">
@@ -54,7 +54,7 @@ const Testimonials = () => {
           <div className="text-center space-y-6 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Histórias Reais de{" "}
-              <span className="bg-gradient-to-r from-coral via-peach to-cyan bg-clip-text text-transparent">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-coral via-turquoise to-lime">
                 Transformação
               </span>
             </h2>
@@ -72,7 +72,7 @@ const Testimonials = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.color.replace('coral', 'coral-50').replace('peach', 'peach-50').replace('cyan', 'cyan-50').replace('violet', 'violet-50')} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
                 
                 <CardContent className="relative p-8 space-y-6">
                   {/* Quote icon */}
@@ -80,7 +80,7 @@ const Testimonials = () => {
                     <Quote className="w-8 h-8 text-gray-300" />
                     <div className="flex gap-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-peach-400 text-peach-400" />
+                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
                   </div>
@@ -109,7 +109,7 @@ const Testimonials = () => {
           </div>
 
           {/* Results Statistics */}
-          <div className="bg-gradient-to-r from-violet-50 via-peach-50 to-cyan-50 rounded-3xl p-12 animate-fade-in">
+          <div className="bg-gradient-to-r from-gray-50 to-white rounded-3xl p-12 animate-fade-in">
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-12">
               Resultados Comprovados
             </h3>
@@ -119,7 +119,7 @@ const Testimonials = () => {
                   key={index}
                   className="text-center group cursor-default"
                 >
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-coral via-peach to-cyan bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-turquoise via-coral to-lime mb-3 group-hover:scale-110 transition-transform duration-300">
                     {stat.number}
                   </div>
                   <p className="text-gray-600 leading-relaxed">{stat.label}</p>

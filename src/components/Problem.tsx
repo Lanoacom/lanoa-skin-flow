@@ -26,10 +26,10 @@ const Problem = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-violet-50 to-cyan-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-coral-100 to-peach-100 rounded-full -translate-y-32 translate-x-32"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-lavender-100 to-cyan-100 rounded-full translate-y-24 -translate-x-24"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-rose/10 rounded-full -translate-y-32 translate-x-32"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-turquoise/10 rounded-full translate-y-24 -translate-x-24"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-16">
@@ -37,7 +37,7 @@ const Problem = () => {
           <div className="space-y-6 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Cansada de Gastar Dinheiro com Produtos que{" "}
-              <span className="bg-gradient-to-r from-coral to-lavender bg-clip-text text-transparent">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-coral to-orange-500">
                 Não Funcionam
               </span>{" "}
               para Você?
@@ -54,11 +54,11 @@ const Problem = () => {
             {painPoints.map((point, index) => (
               <div 
                 key={index}
-                className="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in border border-violet-100"
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-coral-100 to-cyan-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-coral/20 to-turquoise/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <point.icon className="w-8 h-8 text-coral" />
                   </div>
                   <div className="space-y-3 text-left">
@@ -72,14 +72,14 @@ const Problem = () => {
 
           {/* Visual representation */}
           <div className="relative mt-16 animate-fade-in">
-            <div className="bg-gradient-to-r from-violet-100 via-peach-100 to-cyan-100 rounded-3xl p-12">
+            <div className="bg-gradient-to-r from-rose/20 to-turquoise/20 rounded-3xl p-12">
               <div className="grid grid-cols-3 md:grid-cols-6 gap-4 opacity-60">
                 {Array.from({ length: 12 }).map((_, i) => (
                   <div
                     key={i}
-                    className="aspect-square bg-white/80 rounded-lg shadow-sm flex items-center justify-center"
+                    className="aspect-square bg-white rounded-lg shadow-sm flex items-center justify-center"
                   >
-                    <div className="w-8 h-8 bg-gradient-to-br from-coral-200 to-cyan-200 rounded"></div>
+                    <div className="w-8 h-8 bg-gradient-to-br from-gray-200 to-gray-300 rounded"></div>
                   </div>
                 ))}
               </div>
