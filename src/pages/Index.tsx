@@ -1,4 +1,5 @@
 
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import SkinKits from "@/components/SkinKits";
@@ -9,6 +10,7 @@ import Quiz from "@/components/Quiz";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <Hero />
       <Problem />
       <SkinKits />
