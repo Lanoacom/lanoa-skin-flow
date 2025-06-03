@@ -6,6 +6,7 @@ import SkinKits from "@/components/SkinKits";
 import Benefits from "@/components/Benefits";
 import Testimonials from "@/components/Testimonials";
 import Quiz from "@/components/Quiz";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <Benefits />
       <Testimonials />
       <Quiz />
+      <Footer />
     </div>
   );
 };
